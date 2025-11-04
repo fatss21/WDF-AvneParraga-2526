@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
+    <title>Café Luna</title>
+</head>
+
+<body>
+    <header>
+        <img src="startbestanden/logo.png" alt="logo">
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact</h1>
+        <p>Heb je een vraag, suggestie of wil je reserveren? Vul het formulier in en we nemen snel contact met je op.
+        </p>
+
+        <legend>Jouw gegevens</legend>
+        <label for="fname">Naam *</label>
+        <input type="text" id="fname" placeholder="Voornaam Achternaam"><br>
+        <label for="email1">Email *</label>
+        <input type="text" id="email1" placeholder="naam@voorbeeld.be"><br>
+        <label for="mobile">Tel *</label>
+        <input type="text" id="mobile" placeholder="+32 4 ...">
+
+        <legend>Je bericht</legend>
+        <label for="edu">Onderwerp </label>
+        <select id="edu">
+            <option value="-1">Algemene Vraag</option>
+        </select><br>
+        <label>Contactvoorkeur<input type="radio" name="group1" value="a"> E-mail</label>
+        <label><input type="radio" name="group1" value="b">Telefoon</label>
+        <legend>Bericht *</legend>
+        <textarea rows="5" cols="40"></textarea><br>
+        <label><input type="checkbox" value="a"> Ik wil de nieuwsbrief ontvangen</label><br>
+        <label><input type="checkbox" value="b"> Ik ga akkoord met de verwerking van mijn gegevens</label><br>
+        <button type="submit">Verzenden</button>
+        <button type="reset">Wissen</button>
+        <h2>Vind ons </h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5034.904517705395!2d4.69701427678651!3d50.878339371677015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c160d859c99635%3A0x20e085a645ab0359!2sLeuven%20Oude%20Markt!5e0!3m2!1sen!2sbe!4v1762249199017!5m2!1sen!2sbe"
+            width="600" height="450" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </main>
+    <footer>
+        <a href=""><span class="material-symbols-outlined">map</span>Oude Markt 1, 3000 Leuven</a><br>
+        <a href="mailto:"><span class="material-symbols-outlined">mail</span>hallo@caffeluna.tld</a><br>
+        <a href="tel:"><span class="material-symbols-outlined">phone_in_talk</span>0412/34.56.78</a>
+        <p><span class="fa-regular fa-clock"></span>Open van maandag tot zaterdag, 8u tot 18u. <br>
+            Zondag gesloten.</p>
+        <small>&copy;Caffè Luna - Alle rechten voorbehouden</small>
+
+    </footer>
+</body>
+
+</html>
