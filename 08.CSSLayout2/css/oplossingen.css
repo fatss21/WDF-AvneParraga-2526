@@ -1,0 +1,282 @@
+/* =========================================
+   PRODUCTOVERZICHT
+========================================= */
+
+.grid-products {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.grid-products .item {
+	background: #dbeafe;
+	border-radius: 8px;
+	padding: 14px;
+	text-align: center;
+}
+
+
+/* =========================================
+   BLOG LAYOUT
+========================================= */
+
+.blog-layout {
+	display: grid;
+	grid-template-columns: 250px 1fr;
+	gap: 30px;
+}
+
+.blog-layout .sidebar {
+	background: #fecaca;
+	border-radius: 8px;
+	padding: 12px;
+}
+
+.blog-layout .main {
+	background: #bbf7d0;
+	border-radius: 8px;
+	padding: 12px;
+}
+
+
+/* =========================================
+   BOEKENMUUR
+========================================= */
+
+.book-wall {
+	max-width: 900px;
+	display: grid;
+	gap: 15px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.book-wall .book {
+	background: white;
+	border-radius: 8px;
+	padding: 10px;
+}
+
+.book-wall .book img {
+	border-radius: 6px;
+	display: block;
+	height: auto;
+	max-width: 300px;
+	width: 100%;
+}
+
+.book-wall .book .title {
+	font-size: 1rem;
+	margin: 8px 0 0 0;
+}
+
+.book-wall .book .author,
+.book-wall .book .year {
+	color: #555;
+	font-size: 0.9rem;
+	margin: 4px 0;
+}
+
+.book-wall .book .desc {
+	font-size: 0.9rem;
+	margin-top: 6px;
+}
+
+/* =========================================
+   FORMULIER IN GRID
+========================================= */
+
+.form-grid {
+	max-width: 600px;
+	min-height: 300px;
+	display: grid;
+	grid-template-columns: 150px 1fr;
+	grid-template-rows: auto auto 1fr;
+	gap: 12px;
+}
+
+.form-grid input,
+.form-grid textarea {
+	padding: 6px;
+}
+
+/* =========================================
+   CONFERENTIESCHEMA
+========================================= */
+
+.conference {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: auto 1fr 1fr 1fr;
+	grid-template-rows: auto 180px 80px 180px;
+	
+}
+
+.conference :first-child {
+	margin-top: 0;
+}
+
+.conference .hours {
+	background: #ddd;
+	border-radius: 6px;
+	font-weight: bold;
+	padding: 12px;
+	text-align: center;
+}
+
+.conference .day {
+	background: #fde68a;
+	border-radius: 6px;
+	font-weight: bold;
+	padding: 12px;
+	text-align: center;
+}
+
+.conference .session {
+	background: #d1e7ff;
+	border-radius: 6px;
+	padding: 12px;
+}
+
+.conference .break {
+	background: #e7ffe0;
+	border-radius: 6px;
+	padding: 12px;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* =========================================
+   PRODUCTFICHE
+========================================= */
+
+.media {
+	max-width: 700px;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+}
+
+.media img {
+	display: block;
+	height: 150px;
+}
+
+.media .text {
+	padding: 8px 12px;
+}
+
+.media .buy .button {
+	background: #111;
+	border-radius: 8px;
+	color: white;
+	display: inline-block;
+	padding: 8px 12px;
+	text-decoration: none;
+}
+
+/* =========================================
+   PINTEREST-STIJL GRID
+========================================= */
+
+.pin-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(3, 100px);
+	gap: 10px;
+}
+
+.pin-grid .pin {
+	background: #e5e7eb;
+	border-radius: 8px;
+	padding: 10px;
+}
+
+.pin-grid .pin.tall {
+	background: #d1fae5;
+	grid-row: span 2;
+}
+
+/* =========================================
+   BREDE KAARTEN
+========================================= */
+
+.cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr 3fr;
+	gap: 20px;
+}
+
+.cards .card {
+	background: #f3f4f6;
+	border-radius: 8px;
+	padding: 12px;
+	text-align: center;
+}
+
+.cards .wide {
+	background: #e0e7ff;
+	grid-column: span 2;
+}
+
+
+/* =========================================
+   SPRINGEN
+========================================= */
+
+.jump-grid {
+	width: 600px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 150px 150px;
+	align-items: end;
+	justify-items: center;
+}
+
+
+.jump-grid .man {
+	height: 100px;
+}
+
+.jump-grid .man.jump {
+	align-self: start;
+}
+
+
+/* =========================================
+   BUITENHOEKEN
+========================================= */
+
+.corner-grid {
+	width: 500px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 150px 150px;
+}
+
+.corner-grid .cell {
+	background: #dbeafe;
+	font-size: 0.75rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 50%;
+	line-height: 80px;
+	text-align: center;
+	align-self: start;
+	justify-self: left;
+}
+
+.corner-grid .cell:nth-child(2) {
+	align-self: start;
+	justify-self: right;
+
+}
+
+.corner-grid .cell:nth-child(4) {
+	align-self: end;
+	justify-self: right;
+}
+
+.corner-grid .cell:nth-child(3) {
+	align-self: end;
+	justify-self: left;
+}
