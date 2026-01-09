@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS design – oefenblad</title>
+	<link rel="stylesheet" href="css/start.css">
+	<link rel="stylesheet" href="css/oplossingen.css">
+</head>
+
+<body>
+
+	<header class="page-header" aria-label="Paginakop">
+		<h1>CSS design – oefenblad</h1>
+		<p>
+			Werk enkel in <code>css/oplossingen.css</code>.
+			Een screenshot van het eindresultaat vind je <a href="screenshot.png">hier</a>.
+		</p>
+	</header>
+
+	<main>
+
+		<!-- font-family en font-size -->
+		<section class="exercise" id="ex1">
+			<h2>font-family en font-size</h2>
+			<p class="goal">Doel: basis-typografie instellen met lettertype en lettergrootte.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor lettertype en lettergrootte:</p>
+				<ul>
+					<li><code>font-family</code>: lettertype, met fallbacks indien het niet beschikbaar is</li>
+					<li><code>font-size</code>: een groote in <code>px</code> of sleutelwoorden als <code>smaller</code>, <code>larger</code>...</li>
+				</ul>
+				<p>Voorbeeld:</p>
+				<pre class="code-block"><code>p {
+  font-family: Helvetica, Arial, sans-serif; <span class="comment">/* Helvetica, met fallback Arial of elk sans-serif lettertype */</span>
+  font-size: 14px; <span class="comment">/* iets kleiner dan browserstandaard (16px) */</span>
+}</code></pre>
+				<p>De <em>serifs</em> zijn eindversieringen van letters. Typisch serif lettertypes zijn <em>Times New Roman</em> en <em>Georgia</em>, sans-serif voorbeelden zijn <em>Arial</em>, <em>Verdana</em>...</p>
+				<p><img src="img/serif.webp" alt="" width="300"></p>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Stel voor alle elementen de lettergroote in <code>14px</code>.</li>
+					<li>Stel voor alle elementen het lettertype in op <code>'Segoe UI'</code> met als fallback <code>Verdana</code> en <code>sans-serif</code>.</li>
+					<li>Geef de titel een lettergrootte van <code>22px</code>.</li>
+					<li>Geef de titel een lettertype <code>Georgia</code> met als fallback <code>serif</code>.</li>
+					<li>Geef de eerste letter van paragrafen een lettergrootte van <code>20px</code>.</li>
+					<li>Geef de blockquote een lettergrootte van <code>larger</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<h3>Typografie</h3>
+				<p>Ontdekt vreezen bersawa smelter ontzegd een <strong>dan trekken</strong>. Vergrooten ze verkochten <em>kwartspuin</em> nu al kwartslaag na opgebracht. Ton <a href="">economisch</a> lot vruchtbaar bergachtig. Reeds zelfs wat haven ploeg die ander steek. Bezetting federatie en nu behandeld prachtige <a href="">mengeling de voorspoed</a>. Hand bate haar <em>mont sap over</em> voor met. Maal west werd op veld er rang. Zware wegen <strong>staat noemt</strong> in na en bezit:</p>
+				<blockquote>&ldquo;Aankoopen en in australie de al financien boom al vele op klei&rdquo;</blockquote>
+				<p>Huwelijken initiatief om ze nu <a href="">spoorwegen</a> is ontsnappen. Na in betreft <strong>product en planken</strong> te rechten plantte.</p>
+			</div>
+		</section>
+
+		<!-- font-weight en font-style -->
+		<section class="exercise" id="ex2">
+			<h2>font-weight en font-style</h2>
+			<p class="goal">Doel: accenten leggen met gewicht (bold) en stijl (italic).</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor lettergewicht en letterstijl:</p>
+				<ul>
+					<li><code>font-weight</code>: bepaalt hoe “dik” letters zijn (bv. <code>normal</code>, <code>bold</code> of 100–900)</li>
+					<li><code>font-style</code>: maakt tekst schuin met <code>italic</code> (of terug <code>normal</code>)</li>
+				</ul>
+				<p>Voorbeeld:</p>
+				<pre class="code-block"><code>h3 {
+  font-weight: 600; <span class="comment">/* semi-vet (tussen 400 en 700) */</span>
+}
+.intro {
+  font-style: italic; <span class="comment">/* schuin voor een intro */</span>
+}
+.accent {
+  font-weight: bold; <span class="comment">/* klassiek vet */</span>
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Stel het gewicht van de titel in op normaal.</li>
+					<li>Maak de paragraaf direct na de titel schuin.</li>
+					<li>Maak definitielijst termen en links vet en schuin.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<h3>Nieuwsbericht</h3>
+				<p>Deze paragraaf na de titel komt schuin.</p>
+				<p>Ten terreinen met <a href="">gebergten aankoopen</a> hen nabijheid. Is gunstigste ingenieurs er in <a href="">aanleiding mijnschool</a>. Gas dalen are alais rijen massa bakje ouder. Behoeven goa wasschen dat gas uit kolonien negritos indische vroegere. Twee ons heen zien die wild als het.</p>
+				<dl>
+					<dt>HTML</dt>
+					<dd>gebruik voor structuur</dd>
+					<dt>CSS</dt>
+					<dd>gebruik voor opmaak</dd>
+					<dt>Javascript</dt>
+					<dd>gebruik voor dynamiek</dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- color en background-color -->
+		<section class="exercise" id="ex3">
+			<h2>color en background-color</h2>
+			<p class="goal">Doel: tekstkleur en achtergrondkleur instellen</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor tekst- en achtergrondkleur:</p>
+				<ul>
+					<li><code>color</code>: tekstkleur</li>
+					<li><code>background-color</code>: achtergrondkleur</li>
+				</ul>
+				<p>De meest gebruikte kleurnotatie is <a href="https://rogiervdl.github.io/CSS-course/02_design.html#hexadecimale-notatie">hexadecimaal</a>:</p>
+				<pre class="code-block"><code>.colorbox {
+  background-color: #5319ca; <span class="comment">/* soort donkerpaars */</span>
+  color: #f9e; <span class="comment">/* shorthand voor #ff99ee */</span>
+}</code></pre>
+				<p>Een kleur kan ook een code zijn. Gebruik best enkel eenvoudige kleuren als <code>black</code>, <code>white</code>, <code>red</code>... Voorbeeld:</p>
+				<pre class="code-block"><code>.inverted {
+  background-color: black;
+  color: white;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef de eerste badge (class <code>success</code>) een groene achtergrond (<code>#5c9</code>) en een witte tekst.</li>
+					<li>Geef de tweede badge (class <code>warning</code>) een gele achtergrond (<code>#ff9</code>).</li>
+					<li>Geef de derde badge (class <code>danger</code>) een rode achtergrond (<code>#d33</code>) en een witte tekst.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<p class="badge success">Succes: opgeslagen</p>
+				<p class="badge warning">Let op: controleer je invoer</p>
+				<p class="badge danger">Fout: iets ging mis</p>
+			</div>
+		</section>
+
+		<!-- line-height, text-transform, text-align -->
+		<section class="exercise" id="ex4">
+			<h2>line-height, text-transform, text-align</h2>
+			<p class="goal">Doel: tekst leesbaarder maken en typografische stijl toepassen.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor leesbaarheid, hoofdletters en uitlijning:</p>
+				<ul>
+					<li><code>line-height</code>: regelafstand, eenheidsloos getal ergens tussen 1 en 2 (bv. <code>1.4</code>, <code>1.6</code>…)</li>
+					<li><code>text-transform</code>: tekst omzetten naar <code>uppercase</code>, <code>lowercase</code>, <code>capitalize</code> (elke eerste letter)</li>
+					<li><code>text-align</code>: horizontale uitlijning: <code>left</code>, <code>center</code>, <code>right</code>, <code>justify</code> (uitvullen)</li>
+				</ul>
+				<p>Voorbeeld:</p>
+				<pre class="code-block"><code>h3 {
+  text-align: center; <span class="comment">/* titel centreren */</span>
+}
+.upper {
+  text-transform: uppercase; <span class="comment">/* zet in hoofdletters */</span>
+}
+p {
+  line-height: 1.4; <span class="comment">/* zet regels iets meer uit elkaar */</span>
+}</code></pre>
+				<p>Tip: <code>line-height</code> werkt het best als het een getal is (zonder px), zodat het meeschalend is met de tekst.</p>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Zet elke eerste letter van de titel in hoofdletters met <code>capitalize</code>.</li>
+					<li>Centreer de titel.</li>
+					<li>Vul de paragrafen uit over de breedte.</li>
+					<li>Stel de regelhoogte van paragrafen in op <code>1.6</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<h2>Oli fanten brand hout</h2>
+				<p>
+					Al wilde eerst te onder verre. Het gas vast den jaar noch. Jaarlijks ze de kettingen bezetting is ijzererts.
+					Scheppen uitkeert na bedreven nu bestuurd interest of geringer al. Ons dus zullen vijand gelukt. Versteend in voornemen ad evenwicht producten of snelleren de kapitalen. Goud open bak dit hier nam.
+					on bekoeld deficit hen scholen zekeren. Er op langs al deden goten perak sinds. Zesde holte een wie zes ander witte. Er de onzer werkt ouder mooie of weren. Wassching in evenwicht om vierkante maleische voldoende de al.
+				</p>
+				<p>
+					Britsche de ze roestige al om landbouw behoefte. Oog zou veelal woords rijker ter voeden was. Ze verkocht hectaren op vermengd af. Ten terreinen met gebergten aankoopen hen nabijheid. Is gunstigste ingenieurs er in aanleiding mijnschool. Gas dalen are alais rijen massa bakje ouder. Behoeven goa wasschen dat gas uit kolonien negritos indische vroegere. Twee ons heen zien die wild als het.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- links: text-decoration, text-underline-offset -->
+		<section class="exercise" id="ex5">
+			<h2>Links: text-decoration en text-underline-offset</h2>
+			<p class="goal">Doel: opmaak lijntjes onder links instellen.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor link-onderlijning:</p>
+				<ul>
+					<li><code>text-decoration</code>: streepjes onder links tonen of verbergen (<code>underline</code> of <code>none</code>)</li>
+					<li><code>text-underline-offset</code>: afstand tussen linktekst en lijntje (bv. <code>3px</code>)</li>
+				</ul>
+				<p>Voorbeeld:</p>
+				<pre class="code-block"><code>a {
+  text-decoration: none; <span class="comment">/* standaard zonder lijntje */</span>
+}
+a:hover {
+  text-decoration: underline; <span class="comment">/* lijntje bij hover */</span>
+  text-underline-offset: 3px; <span class="comment">/* 3px lager voor een nettere look */</span>
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Stel de afstand tussen link en lijntje in op <code>10px</code>.</li>
+					<li>Verwijder lijntjes van links bij hover</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<p>
+					<a href="#">Documentatie</a> &mdash;
+					<a href="#">Voorbeelden</a> &mdash;
+					<a href="#">Contact</a>
+				</p>
+			</div>
+		</section>
+
+		<!-- lijsten: list-style -->
+		<section class="exercise" id="ex6">
+			<h2>Lijsten: list-style, padding-left</h2>
+			<p class="goal">Doel: bullets/nummering kiezen en de lijst netjes zetten.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor lijsten:</p>
+				<ul>
+					<li><code>list-style</code>: type bullet/nummering (bv. <code>none</code>, <code>disc</code>, <code>square</code>, <code>decimal</code>)</li>
+					<li><code>padding-left</code>: indentering van de lijst (veel browsers geven standaard padding)</li>
+				</ul>
+				<p>Voorbeeld:</p>
+				<pre class="code-block"><code>ul {
+  list-style: none; <span class="comment">/* geen bullets */</span>
+  padding-left: 0; <span class="comment">/* ook de standaard indent weghalen */</span>
+}</code></pre>
+				<p>Tip: als je zelf icons/bullets toevoegt met <code>::before</code>, zet dan eerst <code>list-style: none</code>.</p>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Haal de bullets bij de checklist weg.</li>
+					<li>Stel de linkerpadding van de checklist in op <code>0</code>.</li>
+					<li>Zet voor elke <code>li</code> van de checklist het '✓ ' karakter (tip: gebruik de <code>::before</code> pseudo selector).</li>
+					<li>Geef de stappenplan lijst bullets van het type <code>upper-latin</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<h3>Checklist</h3>
+				<ul class="check">
+					<li>structuur</li>
+					<li>kleuren</li>
+					<li>typografie</li>
+				</ul>
+
+				<h3>Stappenplan</h3>
+				<ol class="steps">
+					<li>download</li>
+					<li>installeer</li>
+					<li>test</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- background-image -->
+		<section class="exercise" id="ex7">
+			<h2>background-image</h2>
+			<p class="goal">Doel: een achtergrondafbeelding instellen.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor achtergrondbeeldingen:</p>
+				<ul>
+					<li><code>background-color</code>: fallback achtergrondkleur, zichtbaar wanneer de afbeelding nog niet geladen is</li>
+					<li><code>background-image</code>: achtergrondbeelding, instellen met <code>url(...)</code></li>
+				</ul>
+				<p>Voorbeeld:</p>
+				<pre class="code-block"><code>.banner {
+  background-color: #eee; <span class="comment">/* fallback kleur */</span>
+  background-image: url(../img/bg.png); <span class="comment">/* stel bg.png in als achtergrond  */</span>
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef de banner een violet achtergrondkleur (<code>#606</code>).</li>
+					<li>Stel op de banner de afbeelding <code>bg.jpg</code> uit de <code>img</code> map als achtergrond in.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<div class="banner">
+					<h3>My travel blog</h3>
+					<p>leiding inkomen er leelijk inhouds of verdere</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- background-size en background-position -->
+		<section class="exercise" id="ex8">
+			<h2>background-size en background-position</h2>
+			<p class="goal">Doel: achtergrondafbeelding positioneren en grootte instellen.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor grootte en positie:</p>
+				<ul>
+					<li><code>background-position</code>: positie, bv. <code>center top</code> (midden boven), <code>right top</code> (rechts boven), <code>left bottom</code> (links onder)...</li>
+					<li><code>background-size</code>: grootte, bv. <code>cover</code> (bedekken), <code>contain</code> (bevatten), <code>100% 100%</code> (passend)...</li>
+				</ul>
+				<p>Voorbeeld:</p>
+				<pre class="code-block"><code>.pattern {
+  background-size: 100% 50%; <span class="comment">/* horizontaal 100%, verticaal 50% */</span>
+  background-position: center bottom; <span class="comment">/* midden onder */</span>
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Vertrek van de oplossing van vorige oefening; stel de achtergrondgrootte in op <code>cover</code>.</li>
+					<li>Positioneer de achtergrond horizontaal en verticaal in het midden.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<div class="banner">
+					<h3>Game van de week</h3>
+					<p>leiding inkomen er leelijk inhouds of verdere</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- background-repeat -->
+		<section class="exercise" id="ex9">
+			<h2>background-repeat</h2>
+			<p class="goal">Doel: herhaling achtergrondafbeelding instellen.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Property voor achtergrondherhaling:</p>
+				<ul>
+					<li><code>background-repeat</code>: <code>repeat</code> (default waarde), <code>no-repeat</code>, <code>repeat-x</code>, <code>repeat-y</code></li>
+				</ul>
+				<p>Gebruik in combinatie met <code>background-image</code> en <code>background-size</code>. Voorbeeld:</p>
+				<pre class="code-block"><code>.wall {
+  background-image: url(../img/kleurstrip.png); <span class="comment">/* stel afbeelding in */</span>
+  background-position: right top; <span class="comment">/* begin rechtsboven */</span>
+  background-repeat: repeat-y; <span class="comment">/* herhaal naar onder */</span>
+} </code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef het element met class <code>bottomstrip</code> een lichtblauwe achtergrondkleur (<code>#C8E4FA</code>).</li>
+					<li>Stel de achtergrondafbeelding in op <code>colorstrip.webp</code> uit de <code>img</code> map.</li>
+					<li>Laat het enkel in de x-richting herhalen.</li>
+					<li>Positioneer het (links)onder.</li>
+					<li>Stel de afmeting van de achtergrond in op 100px horizontaal en 10px verticaal.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<div class="bottomstrip"></div>
+			</div>
+		</section>
+
+		<!-- :hover, :active, :focus -->
+		<section class="exercise" id="ex10">
+			<h2>:hover, :active, :focus</h2>
+			<p class="goal">Doel: styling toepassen op interactiestaten. Dit hoort eigenlijk in de <strong>SyntaxOefenblad</strong> opgavereeks en is een herhalingsoefening.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Belangrijke pseudo-classes voor interactie:</p>
+				<ul>
+					<li><code>:hover</code>: wanneer je met de muis over een element gaat</li>
+					<li><code>:active</code>: tijdens het klikken (ingedrukt)</li>
+					<li><code>:focus</code>: wanneer een element actief is (bv. input waarin je typt)</li>
+				</ul>
+				<p>Voorbeeld:</p>
+				<pre class="code-block"><code>a:hover {
+  color: #930; <span class="comment">/* verander link kleur bij hover */</span>
+}
+.btn:active {
+  border-color: red; <span class="comment">/* randkleur wordt rood tijdens klik */</span>
+}
+input[type=number]:focus {
+  background: #9f9; <span class="comment">/* lichtgroene achtergrond bij focus */</span>
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Bij hover op de knop: zwarte achtergrond met witte tekst.</li>
+					<li>Bij active op de knop: maak de tekst schuin.</li>
+					<li>Bij focus op het tekstveld: lichtgele achtergrond (<code>#ff9</code>).</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<input type="text" placeholder="typ hier">
+				<button type="button">klik</button>
+			</div>
+		</section>
+
+		<!-- transition -->
+		<section class="exercise" id="ex11">
+			<h2>transition</h2>
+			<p class="goal">Doel: hover-effect vloeiend maken met transities.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor transitions:</p>
+				<ul>
+					<li><code>transition</code>: bepaalt welke properties animeren en hoe lang</li>
+				</ul>
+				<p>Voorbeeld:</p>
+				<pre class="code-block"><code>a {
+  transition: background-color 0.4s, color 0.3s; <span class="comment">/* vloeiende overgang */</span>
+}
+a:hover {
+  background-color: #16b;
+  color: #f94;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef de knop een lichtblauwe achtergrond (<code>#b3d4f1</code>) en donkerblauwe tekst (<code>#27307b</code>).</li>
+					<li>Bij hover: verwissel tekstkleur en achtergrondkleur.</li>
+					<li>Maak dit vloeiend met een transitie van 0.7s op de achtergrondkleur en 0.3s op de tekstkleur.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<button class="btn" type="button">bevestigen</button>
+			</div>
+		</section>
+
+		<!-- margin, padding -->
+		<section class="exercise" id="ex12">
+			<h2>margin en padding</h2>
+			<p class="goal">Doel: ruimte binnen en buiten een element beheren.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor spacing:</p>
+				<ul>
+					<li><code>padding</code>: ruimte <em>binnen</em> het element</li>
+					<li><code>margin</code>: ruimte <em>buiten</em> het element</li>
+				</ul>
+				<p>Voorbeeld (let op de verschillende opties voor notaties):</p>
+				<pre class="code-block"><code>aside {
+  padding: 15px; <span class="comment">/* 15px binnenruimte rondom */</span>
+}
+.box {
+  padding: 10px 20px; <span class="comment">/* 10px boven/onder, 20px links-rechts */</span>
+}
+img.visual {
+  margin: 0 10px 10px 0; <span class="comment">/* boven rechts onder links */</span>
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef de header een padding van <code>40px</code> verticaal, en <code>80px</code> horizontaal.</li>
+					<li>Geef de header boxes in één regel een padding van overal <code>10px</code>, behalve links, daar is de padding <code>30px</code>.</li>
+					<li>Geef de header boxes een ondermarge van <code>20px</code>.</li>
+					<li>Geef de laatste header box een ondermarge van <code>0</code> (tip: gebruik <code>:last-child</code>).</li>
+					<li>Extra: plaats de header boxes rechts door de linkermarge de waarde <code>auto</code> te geven.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<div class="header">
+					<div class="header-box">
+						Ze verkocht hectaren op vermengd af. Ten terreinen met gebergten aankoopen hen nabijheid.
+					</div>
+					<div class="header-box">
+						Is gunstigste ingenieurs er in aanleiding mijnschool. Gas dalen are alais rijen massa bakje ouder.
+					</div>
+					<div class="header-box">
+						Behoeven goa wasschen dat gas uit kolonien negritos indische vroegere.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- border -->
+		<section class="exercise" id="ex13">
+			<h2>border</h2>
+			<p class="goal">Doel: een rand gebruiken om onderdelen af te bakenen.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor randen:</p>
+				<ul>
+					<li><code>border: <em>&lt;breedte&gt; &lt;randstijl&gt; &lt;kleur&gt;</em></code>: rand rondom (breedte, stijl, kleur)</li>
+					<li><code>border-top</code>, <code>border-right</code>, <code>border-bottom</code>, <code>border-left</code>: idem maar dan aan één zijde</li>
+				</ul>
+				<p>Mogelijke waarden voor randstijl: <code>solid</code>, <code>dashed</code>, <code>dotted</code>... Voorbeeld:</p>
+				<pre class="code-block"><code>.photo {
+  border: 4px solid #ddd; <span class="comment">/* 4px vol lichtgrijs */</span>
+}
+.product {
+  border-bottom: 2px dashed #900; <span class="comment">/* 2px gestreept donkerrood */</span>
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef de callout een volle linkerrand van 6px donkerpaars (<code>#6610f2</code>).</li>
+					<li>Geef de callout daarnaast een dunne 2px gestippelde donkergrijze (<code>#bbb</code>) rand rondom.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<div class="callout">
+					<h3>Tip</h3>
+					<p>Een callout valt op door een rand links.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- border-radius -->
+		<section class="exercise" id="ex14">
+			<h2>border-radius</h2>
+			<p class="goal">Doel: afgeronde hoeken voor een zachtere look.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor afgeronde hoeken:</p>
+				<ul>
+					<li><code>border-radius</code>: rond hoeken af (bv. <code>6px</code>, <code>10px</code>, of <code>999px</code> voor “pill”)</li>
+				</ul>
+				<p>Voorbeeld:</p>
+				<pre class="code-block"><code>button {
+  border-radius: 5px; <span class="comment">/* afgeronde hoeke */</span>
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Rond de hoeken van de box af met <code>10px</code> ronding.</li>
+					<li>Maak de badge rond (tip: stel de radius in op <code>50%</code>).</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<div class="box">Ik zielen in veelal tonnen er in. Tinprijzen interesten karrijders met per zoo ontwouding kwartslaag. Sap puin arme hand ten dit uren. Fortuin bekoeld bewogen den geoogst bontste heb wat hiertoe. </div>
+				<a href="#" class="badge">🩵</a>
+			</div>
+		</section>
+
+		<!-- dimensions -->
+		<section class="exercise" id="ex15">
+			<h2>Afmetingen: height/width/min/max</h2>
+			<p class="goal">Doel: dimensies beperken en consistent maken.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor afmetingen:</p>
+				<ul>
+					<li><code>width</code>, <code>height</code>: vaste breedte/hoogte</li>
+					<li><code>min-width</code>, <code>min-height</code>: minimum</li>
+					<li><code>max-width</code>, <code>max-height</code>: maximum</li>
+				</ul>
+				<p>Voorbeeld:</p>
+				<pre class="code-block"><code>body {
+  max-width: 1200px; <span class="comment">/* niet te breed op grote schermen */</span>
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef het panel een maximum breedte van <code>720px</code>.</li>
+					<li>Geef het panel een minimum breedte van <code>240px</code>.</li>
+					<li>Geef het panel een minimum hoogte van <code>130px</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<div class="panel">
+					<p>Dit panel is tussen 240px en 720px breed, en minimaal 130px hoog.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- box-shadow -->
+		<section class="exercise" id="ex16">
+			<h2>box-shadow</h2>
+			<p class="goal">Doel: diepte creëren met schaduw.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Properties voor schaduwen:</p>
+				<ul>
+					<li><code>box-shadow</code>: schaduw rond een element: <em>x y blur kleur</em></li>
+					<li>vaak gecombineerd met <code>border-radius</code> voor een “card look”</li>
+				</ul>
+				<p>Voorbeeld:</p>
+				<pre class="code-block"><code>.shadowed {
+  box-shadow: 5px 10px 5px #888; <span class="comment">/* x, y, blur, kleur */</span>
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef de kaarten een schaduw: kleur <code>#88b</code>, horizontaal gecentreerd, verticaal <code>5px</code> naar beneden, en een blur van <code>15px</code>.</li>
+					<li>Geef de hoeken ook afgeronde hoeken van van <code>8px</code> voor een “card look”.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<div class="card">
+					<h3>Kaart 1</h3>
+					<p>Deze kaart lijkt boven de pagina te zweven.</p>
+				</div>
+				<div class="card">
+					<h3>Kaart 2</h3>
+					<p>Deze kaart lijkt boven de pagina te zweven.</p>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="page-footer" aria-label="Pagina-voetnoot">
+		<p>CSS design oefenblad – werk enkel in <code>oplossingen.css</code>.</p>
+	</footer>
+
+</body>
+
+</html>

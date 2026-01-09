@@ -1,0 +1,316 @@
+/* 1 – font-family en font-size */
+
+#ex1 .demo {
+	
+	* {
+		font-family: "Segoe UI", Verdana, sans-serif;
+		font-size: 14px;
+	}
+
+	h3 {
+		font-family: Georgia, serif;
+		font-size: 22px;
+	}
+
+	p::first-letter {
+		font-size: 20px;
+	}
+
+	blockquote {
+		font-size: larger;
+	}
+}
+
+
+/* 2 – font-weight en font-style */
+
+#ex2 .demo {
+	
+	h3 {
+		font-weight:normal ;
+	}
+
+	h3+p {
+		font-style: italic;
+	}
+
+	dt, a {
+		font-style: italic;
+		font-weight: bold;
+	}
+
+}
+
+
+/* 3 – color en background-color */
+
+#ex3 .demo {
+	
+	.badge {
+		background-color: #eee;
+		border-radius: 6px;
+		padding: 10px 12px;
+		width: fit-content;
+	}
+
+	.success {
+		background-color: #5c9;
+		color: white;
+	}
+
+	.warning {
+		background-color: #ff9;
+	}
+
+	.danger {
+		background-color: #d33;
+		color: white;
+	}
+}
+
+
+/* 4 – line-height, text-transform, text-align */
+
+#ex4 .demo {
+	
+	h2::first-letter{
+		text-transform: capitalize;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	p {
+		line-height: 1.6;
+		text-align: justify;
+	}
+}
+
+
+/* 5 – links: text-decoration, text-underline-offset */
+
+#ex5 .demo {
+	
+	a {
+		text-underline-offset: 10px;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+
+/* 6 – lijsten: list-style */
+
+#ex6 .demo {
+	
+	.check {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	.check li::before {
+		content: "✓ ";
+	}
+
+	.steps {
+		list-style: upper-latin;
+	}
+
+}
+
+
+/* 7 – background-image */
+
+#ex7 .demo {
+	
+	.banner {
+		border-radius: 6px;
+		color: white;
+		height: 280px;
+		padding: 30px;
+		text-align: center;
+		background-color: #606;
+		background-image: url(img/bg.jpg);
+	}
+}
+
+
+/* 8 – background-repeat, background-position */
+
+#ex8 .demo {
+	
+	.banner {
+		border-radius: 6px;
+		color: white;
+		height: 280px;
+		padding: 30px;
+		text-align: center;
+		background-color: #606;
+		background-image: url(img/bg.jpg);
+		background-size: cover;
+		background-position: center center;
+	}
+}
+
+
+/* 9 – background-size */
+
+#ex9 .demo {
+	
+	.bottomstrip {
+		border: 1px solid #ddd;
+		height: 120px;
+		background-color: #C8E4FA;
+		background-image: url(img/colorstrip.webp);
+		background-repeat: repeat-x;
+		background-position: left bottom;
+		background-size: 100px 10px;
+	}
+}
+
+
+/* 10 – :hover, :active, :focus */
+
+#ex10 .demo {
+	
+	button:hover {
+		background-color: black;
+		color: white;
+	}
+
+	button:active {
+		font-style: italic;
+	}
+
+	input:focus {
+		background-color: #ff9;
+	}
+}
+
+
+/* 11 – transition */
+
+#ex11 .demo {
+	
+	.btn {
+		border: 0;
+		border-radius: 8px;
+		cursor: pointer;
+		padding: 10px 14px;
+		background-color: #b3d4f1;
+		color: #27307b;
+	}
+
+	.btn:hover {
+		background-color: #27307b;
+		color: #b3d4f1;
+		transition: background-color 0.7s, color 0.3s;
+	}
+}
+
+
+/* 12 – margin, padding */
+
+#ex12 .demo {
+	
+	.header {
+		background-image: url(../img/city.jpg);
+		background-position: center bottom;
+		background-size: contain;
+		padding: 40px 80px;
+	}
+
+	.header-box {
+		background-color: #789b;
+		color: #eee;
+		max-width: 350px;
+		padding: 10px;
+		padding-left: 30px;
+		
+	}
+
+	.header-box:last-child {
+		padding-bottom: 0;
+	}
+}
+
+
+/* 13 – border */
+
+#ex13 .demo {
+	
+	.callout {
+		background-color: #fff;
+		border-radius: 6px;
+		padding: 12px 14px;
+		border-left: 6px solid #6610f2;
+		border: 2px dotted #bbb;
+	}
+}
+
+
+/* 14 – border-radius */
+
+#ex14 .demo {
+	
+	.box {
+		background-color: #eee;
+		border: 1px solid #999;
+		margin-bottom: 20px;
+		max-width: 300px;
+		padding: 10px 20px;
+		border-radius: 10px;
+	}
+
+	.badge {
+		background-color: #bcf;
+		color: white;
+		display: inline-block;
+		font-size: 20px;
+		padding: 10px;
+		text-decoration: none;
+		border-radius: 50%;
+	}
+}
+
+
+/* 15 – dimensions */
+
+#ex15 .demo {
+	
+	.panel {
+		background-color: #fff;
+		border: 1px solid #ddd;
+		border-radius: 6px;
+		padding: 12px;
+		max-width: 720px;
+		min-width: 240px;
+		min-height: 130px;
+	}
+
+}
+
+/* 16 – box-shadow */
+
+#ex16 .demo {
+	
+	.card > :first-child {
+		margin-top: 0;
+		box-shadow: 0 5px 15px #88b;
+	}
+
+	.card > :last-child {
+		margin-bottom: 0;
+		box-shadow: 0 5px 15px #88b;
+	}
+
+	.card {
+		background: #fff;
+		margin-bottom: 50px;
+		padding: 16px;
+		border-radius: 8px;
+	}
+}
