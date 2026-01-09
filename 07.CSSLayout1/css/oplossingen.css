@@ -1,0 +1,213 @@
+/**
+ * Oplossingen
+ *
+ * Werk enkel in dit bestand.
+ *
+ */
+
+/* =========================================
+   OEFENING 1 – GECENTREERDE CONTAINER
+========================================= */
+
+.container {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* =========================================
+   OEFENING 2 – RECHTS UITLIJNEN
+========================================= */
+
+#banner {
+	background-image: url(../img/banner.jpg);
+	background-size: cover;
+	padding: 60px 20px;
+}
+
+.inset {
+	background-color: #6669;
+	padding: 20px;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.inset p {
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 30px;
+	margin-top: 0;
+}
+
+.inset .button {
+	background-color: #17a348;
+	border-bottom: 3px solid rgb(0 0 0 / 15%);
+	display: block;
+	margin: auto;
+	margin-right: 0;
+}
+
+.button::after {
+	content: ' »';
+}
+
+/* =========================================
+   OEFENING 3 – TEXT-ALIGN
+========================================= */
+
+.headline {
+	font-size: 22px;
+	text-align: center;
+
+}
+
+.signature {
+	text-align: right;
+}
+
+.copy {
+	text-align: justify;
+}
+
+/* =========================================
+   OEFENING 4 – FLOAT LEFT
+========================================= */
+
+.post {
+	max-width: 450px;
+}
+
+.post .visual {
+	width: 220px;
+	float: left;
+	margin-right: 16px;
+	margin-bottom: 12px;
+}
+
+/* =========================================
+   OEFENING 5 – FLOAT RIGHT
+========================================= */
+
+.pullquote {
+	background-color: #fff;
+	border-left: 4px solid #333;
+	font-size: larger;
+	font-style: italic;
+	padding: 12px;
+	width: 200px;
+	float: right;
+	margin-left: 16px;
+	margin-bottom: 12px;
+}
+
+/* =========================================
+   OEFENING 6 – POSITION FIXED
+========================================= */
+
+.fixed {
+	min-height: 100px;
+}
+
+.fixed-banner {
+	background: #ffc;
+	border: 1px solid #e3d08c;
+	padding: 10px 14px;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	box-shadow: 5px 5px 15px #8609;
+}
+
+.fixed-banner .banner-link {
+	margin-left: 10px;
+}
+
+/* =========================================
+   OEFENING 7 – POSITION STICKY
+========================================= */
+
+.layout .content {
+	line-height: 1.6;
+}
+
+.menu {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	display: flex;
+	gap: 10px;
+	list-style: none;
+	padding: 14px;
+	position: sticky;
+	top: 15px;
+
+}
+
+
+/* =========================================
+   OEFENING 8 – DISPLAY + FIT-CONTENT
+========================================= */
+
+.btn-readmore {
+	color: black;
+	font-size: smaller;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: block;
+	width: fit-content;
+	border: 1px black;
+	padding: 5px 10px;
+	margin-top: 10px;
+}
+
+/* =========================================
+   OEFENING 9 – DISPLAY VS VISIBILITY VS OPACITY
+========================================= */
+
+.removed {
+	display: none;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.faded {
+	opacity: 0.5;
+}
+
+.card:hover .invisible {
+	visibility: visible;
+	
+}
+
+.card:hover .faded {
+	opacity: 1;
+	transition: opacity 0.2s;
+}
+
+/* =========================================
+   OEFENING 10 – OVERFLOW
+========================================= */
+
+.scrollpanel figure {
+	margin-left: 0;
+}
+
+.scrollpanel figcaption {
+	font-size: smaller;
+	font-style: italic;
+}
+
+.scrollpanel img {
+	width: 60px;
+}
+
+
+.scrollpanel {
+	max-width: 500px;
+	max-height: 200px;
+	overflow-y: auto;
+}
