@@ -1,0 +1,304 @@
+/* =========================================
+   1. TAG SELECTOR
+========================================= */
+
+#ex1 .demo {
+
+	p {
+		color: #00C;
+		font-size: 14px;
+	}
+
+	strong {
+		text-transform: uppercase;
+	}
+}
+
+
+/* =========================================
+   2. TITELS SELECTEREN
+========================================= */
+
+#ex2 .demo {
+
+
+	h3 {
+		font-size: 20px;
+		font-weight: 400;
+	}
+}
+
+
+/* =========================================
+   3. CLASS SELECTOR
+========================================= */
+
+#ex3 .demo {
+
+	.highlight {
+		background-color: #ffa600;
+		font-style: italic;
+	}
+}
+
+
+/* =========================================
+   4. MULTIPLE CLASS SELECTOR
+========================================= */
+
+#ex4 .demo {
+
+	.button .yes {
+		background-color: #0d6efd;
+		color: #fff;
+	}
+
+	.button .no {
+		background-color: #dc3545;
+		color: #fff;
+	}
+}
+
+
+/* 5 – ID-selector */
+
+#ex5 .demo {
+
+	#speciaal {
+		background-color: black;
+		color: white;
+	}
+
+}
+
+
+/* 6 – blok en #uniek */
+
+#ex6 .demo {
+
+	.specifiek {
+		background-color: #aaa;
+		color: white;
+	}
+
+	#uniek {
+		background-color: #666;
+	}
+
+	div {
+		background-color: #eee;
+		color: #800080;
+	}
+}
+
+
+/* 7 – universele selector */
+
+#ex7 .demo {
+
+	* {
+		border: 1px solid black;
+		padding: 4px;
+	}
+
+}
+
+
+/* 8 – grouping */
+
+#ex8 .demo {
+
+	h3,
+	h4,
+	.gekleurd {
+		color: #6610f2;
+		font-weight: 500;
+	}
+
+}
+
+
+/* 9 – descendant selector */
+
+
+
+#ex9 .demo {
+
+	header p {
+		font-size: 13px;
+		font-style: italic;
+	}
+
+	.main p {
+		margin: 14px 0;
+	}
+}
+
+
+/* 10 – direct child selector */
+
+
+#ex10 .demo {
+
+	.blok>p {
+		color: #080;
+	}
+
+}
+
+
+/* 11 – next sibling selector */
+
+#ex11 .demo {
+
+	h3+p {
+		color: red;
+	}
+
+}
+
+/* 12 – attribute selector */
+
+#ex12 .demo {
+
+	input[type=text] {
+		font-style: italic;
+	}
+
+	input[type=email] {
+		background-color: #ff9;
+	}
+
+	input[type=checkbox],
+	input[type=radio] {
+		accent-color: #080;
+	}
+
+	button[type=submit] {
+		background-color: #7bf;
+	}
+
+	a[href="https://"] {
+		color: #080;
+	}
+
+	a[href="http://"] {
+		color: #800;
+	}
+
+}
+
+
+/* 13 – pseudo-class hover */
+
+#ex13 .demo {
+
+	button:hover {
+		background-color: black;
+		color: white;
+	}
+
+	button:active {
+		font-style: italic;
+	}
+
+	button:focus {
+		background-color: #ff9;
+	}
+
+}
+
+
+/* 14 – pseudo-class first-child */
+
+#ex14 .demo {
+
+	li:first-child {
+		background-color: #90ee90;
+	}
+
+	li:last-child {
+		background-color: #9090ee;
+	}
+
+}
+
+/* 15 – ::before en ::after */
+
+#ex15 .demo {
+
+	p::before {
+		color: #33b;
+		content: "⦿";
+	}
+
+	p::after {
+		content: "👉🏻";
+		margin-left: 5px;
+	}
+
+}
+
+/* 16 – tekst pseudo-elements */
+
+#ex16 .demo {
+
+	p::first-letter {
+		color: #900;
+		font-family: Georgia, serif;
+		font-size: 28px;
+	}
+
+	p::first-line {
+		font-weight: bold;
+	}
+
+	::selection {
+		background-color: #ff0;
+		color: #900;
+	}
+}
+
+/* 17 – afsluiter mini-pagina */
+
+#ex17 .demo {
+
+	header *,
+	footer * {
+		margin: 0;
+		padding: 0;
+	}
+
+	header p:last-child {
+		font-weight: bold;
+	}
+
+	.menu a.active {
+		text-decoration: underline;
+	}
+
+	.card> :first-child {
+		margin-top: 0;
+	}
+
+	#steps li:hover {
+		background-color: #ccc;
+	}
+
+	main a[title] {
+		border-bottom: 2px dashed #999;
+		padding-bottom: 2px;
+		text-decoration: none;
+	}
+
+	footer a[href="mailto:"]::before {
+		content: "📨";
+		font-size: 20px;
+		margin-right: 5px;
+	}
+
+	footer li+li::before {
+		content: "•";
+		margin-right: 5px;
+	}
+}

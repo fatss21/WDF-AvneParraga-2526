@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS selectoren – oefenblad</title>
+	<link rel="stylesheet" href="css/start.css">
+	<link rel="stylesheet" href="css/exercises.css">
+	<link rel="stylesheet" href="css/oplossingen.css">
+</head>
+
+<body>
+
+	<header class="page-header" aria-label="Paginakop">
+		<h1>CSS selectoren – oefenblad</h1>
+		<p>
+			Werk enkel in <code>css/oplossingen.css</code>.
+			Een screenshot van het eindresultaat vind je <a href="screenshot.png">hier</a>.
+		</p>
+	</header>
+	<main>
+
+		<!-- TAG SELECTOR -->
+		<section class="exercise" id="ex1">
+			<h2>Tag selector</h2>
+			<p class="goal">Doel: elementen van één soort selecteren.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					Een <em>tagselector</em> selecteert alle HTML-elementen van dezelfde soort.
+					De selector <code>p</code> b.v. selecteert alle paragrafen:
+				</p>
+				<pre class="code-block"><code>p { <span class="comment">/* selecteert alle paragrafen */</span>
+  font-weight: bold;
+  line-height: 1.5;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Maak alle paragrafen donkerblauw met <code>color: #00C</code>, en stel de lettergrootte in met <code>font-size: 14px</code>.</li>
+					<li>Zet alle strongs in hoofdletters met <code>text-transform: uppercase</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<h3>Dit is een titel.</h3>
+				<p>Dit is de eerste paragraaf. Lorem ipsum <strong>dolor sit amet</strong>, consectetur adipisicing elit. Saepe, quidem?</p>
+				<p>Dit is de tweede paragraaf. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, <strong>consequuntur</strong> minima. Architecto!</p>
+				<ul>
+					<li>item1</li>
+					<li>item2</li>
+					<li>item3</li>
+				</ul>
+				<p>Dit is de derde paragraaf. Lorem <strong>ipsum dolor</strong> sit amet consectetur.</p>
+			</div>
+		</section>
+
+		<!-- TITELS SELECTEREN -->
+		<section class="exercise" id="ex2">
+			<h2>Titels</h2>
+			<p class="goal">Doel: verschillende kopniveaus selecteren.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					HTML heeft zes kopniveaus &lt;h1&gt;–&lt;h6&gt;. Elk niveau moet apart gestyled worden met de tagselector. Voorbeeld:
+				</p>
+				<pre class="code-block"><code>h1 { <span class="comment">/* selecteert h1 */</span>
+  text-decoration: underline;
+}
+h2 { <span class="comment">/* selecteert h2 */</span>
+  letter-spacing: 2px;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Maak de &lt;h1&gt;-titel grasgroen met <code>color: #080</code>.</li>
+					<li>Stel de lettergrootte van alle &lt;h3&gt;-titels in met <code>font-size: 20px</code>, en het lettergewicht met <code>font-weight: 400</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<h1>Titel niveau 1</h1>
+				<h3>Titel niveau 3</h3>
+				<h3>Nog een title niveau 3</h3>
+			</div>
+		</section>
+
+
+		<!-- CLASS SELECTOR -->
+		<section class="exercise" id="ex3">
+			<h2>Class selector</h2>
+			<p class="goal">Doel: elementen selecteren op basis van een class attribuut.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					Een class gebruik je om meerdere elementen te selecteren die dezelfde stijl moeten krijgen.
+					Een element met b.v. <code>&lt;... class="accent"&gt;</code> maak je als volgt op (let op het punt vooraf):
+				</p>
+				<pre class="code-block"><code>.accent { <span class="comment">/* selecteert &lt;... class="accent"&gt; */</span>
+  font-style: italic;
+  padding: 6px;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef de items met class <code>highlight</code> een oranje achtergrondkleur met <code>background-color: #ffa600</code>, en zet ze schuin met <code>font-style: italic</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<ul>
+					<li class="highlight">belangrijk item</li>
+					<li>gewoon item</li>
+					<li class="highlight">nog een belangrijk item</li>
+					<li>gewoon item</li>
+					<li>gewoon item</li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- MEERDERE CLASSES -->
+		<section class="exercise" id="ex4">
+			<h2>Meerdere classes</h2>
+			<p class="goal">Doel: elementen selecteren op basis van combinaties van verschillende classes.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					Een element kan meerdere classes hebben. CSS combineert dan de stijlen van alle betrokken classes. Voorbeeld voor b.v. <code>&lt;p class="info big"&gt;:</code>
+				</p>
+				<pre class="code-block"><code>
+.info { <span class="comment">/* selecteert elementen met class "info" */</span>
+  border: 1px solid #888;
+}
+.groter { <span class="comment">/* selecteert elementen met class "big" */</span>
+  font-size: 18px;
+}
+.info.groter { <span class="comment">/* selecteert elementen met class "info" én "big" */</span>
+  color: #009;
+}
+</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef de ja-knop een blauwe achtergrond met <code>background-color: #0d6efd</code>, en de nee-knop een rode met <code>background-color: #dc3545</code>. De twee links eronder mogen niet mee veranderen.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<div class="buttons">
+					<a href="#" class="button yes">ja</a>
+					<a href="#" class="button no">nee</a>
+					<a href="#" class="yes">ja</a>
+					<a href="#" class="no">nee</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- ID-selector -->
+		<section class="exercise" id="ex5">
+			<h2>ID-selector</h2>
+			<p class="goal">Doel: een uniek element selecteren opbasis van de id.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					Een ID komt maar één keer voor per pagina en selecteer je met
+					<code>#naam</code>. Voorbeeld:
+				</p>
+				<pre class="code-block"><code>#intro { <span class="comment">/* selecteert &lt;... id="intro"&gt; */</span>
+  padding: 20px;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef het element met id <code>speciaal</code> een zwarte achtergrond met <code>background-color: black</code>, en maak de tekst wit met <code>color: white</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<p>Alleen en nu europa en sterke wereld in.</p>
+				<p>Gebouwen dezelfde dit ook <span id="speciaal">kinderen gestoken goa. Jungles twisten</span> mei wolfram dan schenen van.</p>
+				<p>Hij maleische mee vreedzame producten toeneming prachtige bedroegen.</p>
+				<p>Recht op kinta goten eerst zelfs buurt te.</p>
+			</div>
+		</section>
+
+
+		<!-- Specificity -->
+		<section class="exercise" id="ex6">
+			<h2>Specificity</h2>
+			<p class="goal">Doel: selectorgewicht begrijpen van tag-, class- en ID-selectoren.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					CSS kiest welke stijl wordt toegepast op basis van specificiteit, van hoog naar laag:
+					<strong>ID &gt; class &gt; element</strong>. Voorbeeld voor <code>&lt;p class="blok id="belangrijk"&gt;</code>:
+				</p>
+				<pre class="code-block"><code>#belangrijk {
+  color: blue; <span class="comment">/* wint: #belangrijk is specifieker door dan .blok */</span>
+}
+.blok {
+  color: red; <span class="comment">/* verliest: .blok is minder specifiek dan #belangrijk */</span>
+  font-size: 16px; <span class="comment">/* wint: .blok is specifieker dan p */</span>
+}
+p {
+  font-size: 14px; <span class="comment">/* verliest: p is minder specifiek dan .blok */</span>
+  margin-bottom: 14px; <span class="comment">/* geen conflicten */</span>
+}
+</code></pre>
+				<p>
+					De regels die verliezen, staan in de inspector doorgehaald:
+				</p>
+				<p>
+					<img src="img/ex6-screenshot.png" alt="">
+				</p>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef de elementen met class <code>specifiek</code> een middelgrijze achtergrond met <code>color: #aaa</code>.</li>
+					<li>Geef dan het element met id <code>uniek</code> een donkere achtergrond met <code>color: #666</code>.</li>
+					<li>Geef de <code>div</code> elementen een lichte achtergrond met <code>color: #eee</code>.</li>
+					<li>Geef de elementen met class <code>specifiek</code> een witte tekstkleur met <code>color: white</code>.</li>
+					<li>Geef de <code>div</code> elementen een paarse kleur met <code>color: #800080</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<div class="specifiek">Specifiek blok</div>
+				<div>Algemeen blok</div>
+				<div class="specifiek" id="uniek">Specifiek en uniek blok</div>
+				<div>Algemeen blok</div>
+				<div>Algemeen blok</div>
+				<div class="specifiek">Specifiek blok</div>
+			</div>
+		</section>
+
+
+		<!-- Universele selector -->
+		<section class="exercise" id="ex7">
+			<h2>Universele selector</h2>
+			<p class="goal">Doel: alle elementen selecteren met de universele <code>*</code> selector.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					De universele selector <code>*</code> selecteert alle elementen.
+					Gebruik hem spaarzaam. Voorbeeld:
+				</p>
+				<pre class="code-block"><code>* { <span class="comment">/* selecteert <em>alle</em> elementen */</span>
+  margin: 0;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef alle elementen een padding met <code>padding: 4px</code> en een 1px zwarte rand met <code>border: 1px solid black</code>.</li>
+				</ol>
+			</div>
+			<div class="demo">
+				<h2>Titel</h2>
+				<p>Gebruiken op ik bedroegen overvloed ze vereenigd er vertoonen. Dit is een <em>paragraaf</em> met tekst. Is er gekomen vordert geplant product ad ik. <a href="">Ziet</a> ik zoon om meer koel wild en uren. Aandeelen en of nu perzische afstanden.</p>
+			</div>
+		</section>
+
+
+		<!-- Groeperen -->
+		<section class="exercise" id="ex8">
+			<h2>Groeperen</h2>
+			<p class="goal">Doel: dezelfde stijl toepassen op meerdere selectors.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					Met komma's kun je dezelfde stijl toepassen op meerdere selectors. Voorbeeld:
+				</p>
+				<pre class="code-block"><code>header, footer {<span class="comment">/* stijlen gelden voor header én footer */</span>
+  background-color: #009;
+  padding: 10px;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Maak alle &lt;h3&gt;, &lt;h4&gt; en alle elementen met class <code>gekleurd</code> donkerpaars met <code>color: #6610f2</code> en wat vetter met <code>font-weight: 500</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<h3>Uit zoo</h3>
+				<h4>Meehelpen</h4>
+				<p>Bak mag <span class="gekleurd">batoe een deele</span> met ander. Onzer ad in ze meest cenis op heeft anson alles.</p>
+				<h4>En vergoeding</h4>
+				<p>Nu bezorgden bezwarend verdiende om te <span class="gekleurd">ingenieur ongunstig brandhout</span>. Witte ellen ook prijs langs eerst reden wel die per.</p>
+			</div>
+		</section>
+
+
+		<!-- Descendant selector -->
+		<section class="exercise" id="ex9">
+			<h2>Descendant child selector</h2>
+			<p class="goal">Doel: elementen selecteren die binnen een ander element staan.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					Een descendant selector zoals <code>div p</code>
+					selecteert alle paragrafen die ergens binnen een div staan. Voorbeeld:
+				</p>
+				<pre class="code-block"><code>article span { <span class="comment">/* span genest in article */</span>
+  text-transform: uppercase;
+}
+.product p { <span class="comment">/* p genest in .product */</span>
+  margin-top: 6px;
+}
+.product p a { <span class="comment">/* a genest in p genest in .product */</span>
+  margin-top: 6px;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Stel voor paragraaf in de header de lettergrootte in met <code>font-size: 13px</code> en zet het schuin met <code>font-style: italic</code>.</li>
+					<li>Stel voor paragraaf in het element met class <code>main</code> de marge op in met <code>margin: 14px 0</code> (14px boven/onder, 0 links/rechts).</li>
+					<li>Stel voor paragraaf in het element met class <code>main</code> de marge op in met <code>margin: 14px 0</code> (14px boven/onder, 0 links/rechts).</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<header>
+					<h1 href="" class="logo">Logo</h1>
+					<p>wedijveren ik verdwijnen bijzonders</p>
+					<nav aria-label="ex9 nav">
+						<ul>
+							<li><a href="" class="active">home</a></li>
+							<li><a href="">products</a></li>
+							<li><a href="">contact</a></li>
+						</ul>
+					</nav>
+				</header>
+				<div class="main">
+					<p>Wie gegoten schepen van vlakten. Nu zekere ad <a href="">de gezegd</a> pahang en. Uit gevestigd vermijden wij <a href="">bezwarend</a> zij weg tinmijnen. In willen of drukke eenige ik. </p>
+					<p>Huwelijken initiatief om ze nu spoorwegen is ontsnappen. Na in betreft product en planken te rechten plantte. Aankoopen en in <a href="">australie de al</a> financien. Naam boom al vele op klei. </p>
+					<div class="product">
+						<img src="img/vaas.jpg" alt="">
+						<div class="details">
+							<h4>Vaas</h4>
+							<p>Korte beschrijving van dit item.</p>
+							<a href="#" class="buy button">Koop nu &raquo;</a>
+						</div>
+					</div>
+
+				</div>
+				<footer>
+					<p><small>@copy2025 &mdash; made by <a href="">cooldesigns</a></small></p>
+				</footer>
+			</div>
+		</section>
+
+
+		<!-- Direct child selector -->
+		<section class="exercise" id="ex10">
+			<h2>Direct child selector</h2>
+			<p class="goal">Doel: elementen selecteren met <code>&gt;</code> die rechtstreeks genest zijn in een ander element.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					De selector <code>&gt;</code> selecteert alleen elementen direct genest in een ander element. Voorbeeld:
+				</p>
+				<pre class="code-block"><code>.box &gt; span { <span class="comment">/* span <em>direct genest in</em> .box */</span>
+  padding: 5px;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Maak enkel de paragrafen direct genest in <code>.blok</code> groen met <code>color: #080</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<div class="blok">
+					<p>Dit element is direct genest in <code>.blok</code> en moet groen worden.</p>
+					<div>
+						<p>Dit element is niet direct genest en moet zwart blijven</p>
+					</div>
+					<p>Dit element is direct genest in <code>.blok</code> en moet groen worden.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Next sibling selector -->
+		<section class="exercise" id="ex11">
+			<h2>Next sibling selector</h2>
+			<p class="goal">Doel: het element selecteren dat onmiddellijk volgt op een ander element.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					De <em>next sibling selector</em> (<code>+</code>) selecteert
+					enkel het element dat <strong>onmiddellijk volgt</strong> op een ander element.
+				</p>
+				<pre class="code-block"><code>p + ul { <span class="comment">/* ul <em>direct volgend op</em> p */</span>
+  margin-top: 10px;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>
+						Maak de paragrafen onmiddellijk volgend op een &lt;h3&gt; rood met <code>color: red</code>.
+					</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<h3>1. Titel</h3>
+				<p>Deze paragraaf moet rood zijn.</p>
+				<p>Deze paragraaf mag niet veranderen.</p>
+				<h4>1.1 Ondertitel</h4>
+				<p>Deze paragraaf mag niet veranderen.</p>
+				<p>Deze paragraaf mag niet veranderen.</p>
+
+				<h3>2. Titel</h3>
+				<p>Deze paragraaf moet rood zijn.</p>
+				<p>Deze niet.</p>
+				<p>Deze niet.</p>
+			</div>
+		</section>
+
+		<!-- Attribute selector -->
+		<section class="exercise" id="ex12">
+			<h2>Attribute selector</h2>
+			<p class="goal">Doel: selecteren op basis van attribuut(-waarde).</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					Een attribute selector selecteert elementen op basis van een attribuut, en optioneel een waarde. Voorbeelden:
+				</p>
+				<pre class="code-block"><code>input[placeholder] { <span class="comment">/* alle input elementen met placeholder attribuut */</span>
+  border: 1px solid #aaa;
+}
+link[rel=stylesheet] { <span class="comment">/* alle &lt;link rel="stylesheet"&gt; elementen */</span>
+  border: 1px solid #aaa;
+}
+[type=reset] { <span class="comment">/* alle &lt;... type="reset"&gt; elementen */</span>
+  border: 1px solid #aaa;
+}
+img[src^="img/"] { <span class="comment">/* alle img's waarvan de src <em>begint met</em> "img/..." */</span>
+  color: purple;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Zet alle tekstvelden (type="text") schuin met <code>font-style: italic</code>.</li>
+					<li>Geef het emailveld een gele achtergrond met <code>background-color: #ff9</code>.</li>
+					<li>Geef alle aangevinkte keuzes en opties een groene achtergrond met <code>accent-color: #080</code>.</li>
+					<li>Geef de submit butten een blauwe kleur met <code>background-color: #7bf</code></li>
+					<li>Zet de beveiligde link (start met https:) in het groen met <code>color: #080</code> en de onbeveiligde link (start met http:) in het rood met <code>color: #800</code></li>
+				</ol>
+			</div>
+			<div class="demo">
+				<form>
+					<label for="inpFirst">Voornaam</label>
+					<input type="text" id="inpFirst" placeholder="b.v. Ahmed">
+					<label for="inpLast">Naam</label>
+					<input type="text" id="inpLast" placeholder="b.v. Kaczyński">
+					<label for="inpEmail">Email</label>
+					<input type="email" id="inpEmail" placeholder="b.v. a.k@test.com">
+					<label for="inpGsm">GSM</label>
+					<input type="tel" id="inpGsm" placeholder="b.v. 0123/45.67.89">
+					<label>Keuzes</label>
+					<div>
+						<label><input type="checkbox" checked>keuze 1</label>
+						<label><input type="checkbox">keuze 2</label>
+						<label><input type="checkbox" checked>keuze 3</label>
+					</div>
+					<label>Opties</label>
+					<div>
+						<label><input type="radio" name="grp1">optie 1</label>
+						<label><input type="radio" name="grp1" checked>optie 2</label>
+						<label><input type="radio" name="grp1">optie 3</label>
+					</div>
+					<div class="buttons">
+						<button type="reset">wissen</button>
+						<button type="submit">verzenden</button>
+					</div>
+				</form>
+				<p>
+					Dit is een <a href="https://test.com">beveiligde link</a>.
+					<br>Dit is een <a href="http://test.com">onbeveiligde link</a>.
+				</p>
+			</div>
+		</section>
+
+		<!-- Pseudo class selectoren :hover, :focus, :active -->
+		<section class="exercise" id="ex13">
+			<h2>Pseudo class selectoren :hover, :active, :focus</h2>
+			<p class="goal">Doel: elementen selecteren op basis van toestand.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					Een pseudo-class selector kan elementen selecteren op basis van <strong>toestand</strong>. De belangrijkste:
+				</p>
+				<ul>
+					<li><code>:hover</code> &ndash; wanneer je met de muis over het element gaat</li>
+					<li><code>:active</code> &ndash; wanneer je met de muis op het element klikt</li>
+					<li><code>:focus</code> &ndash; wanneer je het element selecteert, b.v. door met de muis erin te klikken</li>
+				</ul>
+				<p>Voorbeeld:</p>
+				<pre class="code-block"><code>button:hover {
+  opacity: 0.8;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef de buttons bij hover een witte tekstkleur op zwarte achtergrond.</li>
+					<li>Maak de tekst van de buttons bij active schuin met <code>font-style:italic</code>.</li>
+					<li>Geef het tekstvak bij focus een lichtgele achtergrond met <code>background-color: #ff9</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<input type="text">
+				<button class="knop" type="button">zoeken</button>
+				<button class="knop" type="button">annuleren</button>
+			</div>
+		</section>
+
+		<!-- Pseudo class selectoren :first-child, :last-child -->
+		<section class="exercise" id="ex14">
+			<h2>Pseudo class selectoren :first-child, :last-child</h2>
+			<p class="goal">Doel: elementen selecteren op basis van positie.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					De selector <code>:first-child</code> selecteert het eerste element binnen de parent.
+					De selector <code>:last-child</code> selecteert het laatste element binnen de parent.
+					Voorbeeld:
+				</p>
+				<pre class="code-block"><code>p:first-child {
+  font-style: italic;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Geef het eerste list-item een groene achtergrond met <code>background-color: #90ee90</code>.</li>
+					<li>Geef het laatste list-item een blauwe achtergrond met <code>background-color: #9090ee</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<ul>
+					<li>Eerste item</li>
+					<li>Tweede item</li>
+					<li>Derde item</li>
+					<li>Vierde item</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- ::before en ::after -->
+		<section class="exercise" id="ex15">
+			<h2>Pseudo-element selectoren ::before en ::after</h2>
+			<p class="goal">Doel: extra inhoud toevoegen aan het begin of einde van elementen.</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					Met <code>::before</code> en <code>::after</code> kan je met CSS inhoud toevoegen aan het begin of het einde van elementen. Dit is nuttig voor inhoud die eigenlijk deel uitmaakt van het design.
+					Deze pseudo-elements werken enkel in combinatie met <code>content</code>. Voorbeeld:
+				</p>
+				<pre class="code-block"><code>li::before {
+  color: #007;
+  content: "→ ";
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Voeg vóór elke paragraaf het ⦿ karakter toe, en zet het in blauw met <code>color: #33b</code>.</li>
+					<li>Voeg na lees meer link de 👉🏻 emoji toe, en geef het een linkermargin met <code>margin-left: 5px</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<p>Dit is de eerste paragraaf &ndash; <a href="" class="more">lees meer</a></p>
+				<p>Dit is de tweede paragraaf &ndash; <a href="" class="more">lees meer</a></p>
+				<p>Dit is de derde paragraaf &ndash; <a href="" class="more">lees meer</a></p>
+			</div>
+		</section>
+
+		<!-- ::selection, ::first-letter, ::first-line -->
+		<section class="exercise" id="ex16">
+			<h2>Pseudo-element selectoren ::selection, ::first-letter, ::first-line</h2>
+			<p class="goal">
+				Doel: deel van een tekst selecteren met <code>::selection</code>,
+				<code>::first-letter</code> en <code>::first-line</code>.
+			</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>
+					Deze pseudo-element selectoren laten toe om specifieke delen van tekst te stylen. Voorbeelden:
+				</p>
+				<pre class="code-block"><code>p::first-letter {
+  font-size: 28px;
+}
+p::first-line {
+  font-size: larger;
+}
+::selection {
+  background-color: #ff0;
+}</code></pre>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<ol>
+					<li>Maak de eerste letter van elke paragraaf 28px groot, donkerrood (kleur <code>#900</code>) en stel het lettertype in met <code>font-family: Georgia, serif</code>.</li>
+					<li>Maak de eerste regel van elke paragraaf vet met <code>font-weight: bold</code>.</li>
+					<li>Geef geselecteerde tekst een gele achtergrond met <code>background-color: #ff0</code> en een donkerrode tekst met <code>color: #900</code>.</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<p>
+					Dit is een voorbeeldparagraaf met voldoende tekst zodat de eerste regel
+					duidelijk zichtbaar is. De rest van de tekst dient enkel om het effect
+					van de pseudo-elements te demonstreren.
+				</p>
+				<p>
+					Ook deze paragraaf bevat meerdere zinnen zodat je duidelijk ziet wat
+					<code>::first-line</code> en <code>::first-letter</code> doen. Nu is of binnenste en vochtigen onderling regeering uitgaande. Aanleiding europeesch nu spoorwegen sagopalmen is. En nu mijnschool monopolies getaxeerde om en weelderige. Gedaald behalen ik meester de kleeren voldoen te ze.
+				</p>
+			</div>
+		</section>
+
+		<!-- Selectoren combineren -->
+		<section class="exercise" id="ex17">
+			<h2>Selectoren combineren</h2>
+			<p class="goal">
+				Doel: verschillende soorten selectoren combineren
+			</p>
+
+			<div class="info box">
+				<h3>Theorie</h3>
+				<p>Je kan alle bovenstaande selectoren combineren. Enkele voorbeelden:</p>
+				<dl class="dltable">
+					<dt><code>main li.special</code></dt>
+					<dd>list items met class <code>special</code> in de main</dd>
+					<dt><code>p strong::first-letter</code></dt>
+					<dd>eerste letter van strongs in paragrafen</dd>
+					<dt><code>.active a</code></dt>
+					<dd>link in een element met de class <code>active</code></dd>
+					<dt><code>h1 + *</code></dt>
+					<dd>het allereerste element volgend op de h1</dd>
+					<dt><code>section &gt; :first-child</code></dt>
+					<dd>het eerste element rechtstreeks genest in een section</dd>
+					<dt><code>footer a[href^=mailto]:hover</code></dt>
+					<dd>hover over de email link in de footer</dd>
+				</dl>
+			</div>
+
+			<div class="assignment box">
+				<h3>Opdracht</h3>
+				<p>Deze oefeningen zijn wat uitdagender. Kijk welke je kan oplossen!</p>
+				<ol>
+					<li>Geef alle elementen in de header en in de footer een <code>padding</code> en <code>margin</code> van <code>0</code></li>
+					<li>Maak de laatste paragraaf in de header vet met <code>font-weight: bold</code>.</li>
+					<li>Zet een lijn onder het actieve menu item met <code>text-decoration: underline</code>.</li>
+					<li>Zet de bovenmarge op 0 van elke eerste child van alle elementen met de class <code>card</code> met <code>margin-top: 0</code>.</li>
+					<li>Geef een hover effect op alle list items van de lijst met id <code>steps</code> met <code>background-color: #ccc</code>.</li>
+					<li>Zet onder elke link met een <code>title</code> attribuut in de main content een stippellijn met <code>border-bottom: 2px dashed #999</code>.</li>
+					<li>Zet voor de email link in de footer het "📨" symbool, met lettergrootte <code>font-size: 20px</code> en marge <code>margin: 5px</code>.</li>
+					<li>Zet voor alle list items in de footer behalve het eerste het "•" symbool met een 5px marge (tip: gebruik <code>li + li</code>).</li>
+				</ol>
+			</div>
+
+			<div class="demo">
+				<header class="site-header">
+					<h1 class="logo">MiniShop</h1>
+					<div>
+						<p>snelle levering</p>
+						<p>eenvoudige retour</p>
+						<p>scherpe prijzen</p>
+					</div>
+					<nav class="menu" aria-label="ex17 nav">
+						<ul>
+							<li><a href="#">home</a></li>
+							<li class="active"><a href="#">verzenden</a></li>
+							<li><a href="#">contact</a></li>
+						</ul>
+					</nav>
+				</header>
+
+				<div id="maincontent">
+					<section class="card">
+						<p>Hoe werkt het?</p>
+						<ul id="steps">
+							<li>stap 1: inpakken</li>
+							<li>stap 2: transport</li>
+							<li>stap 3: ontvangst</li>
+						</ul>
+					</section>
+					<section class="card">
+						<h3>Track &amp; Trace</h3>
+						<p>Maar over dan kuil bak zit toen was veel. Gebouwen <a href="">naburige ook zin</a> ongeveer rug maleiers algemeen. Eischen gif <a href="" title="">gebeurt simplon</a> wat ons opnieuw. Had kan ver elk velden streek drukke. Mineralen perzische rug zes maleische elk bepaalden entrepots. Plaats kracht wat spuwen wel lot ons winnen.</p>
+						<p>Zand veel <a href="">diep komt</a> hun wiel gas mier. Zou gezegd bouwde <a href="" title="">bewijs van enkele</a> francs gelden. Vereenigd bak inlandsen een aan chineesch personeel ontgonnen kettingen sap. Ze tijd te op land welk kaal er.</p>
+					</section>
+
+				</div>
+
+				<footer>
+					<ul>
+						<li><a href="#" title="">Algemene voorwaarden</a></li>
+						<li><a href="#" title="">Privacy</a></li>
+						<li><a href="#" title="">Retourbeleid</a></li>
+					</ul>
+					<p>
+						<a href="mailto:info@minishop.be">info@minishop.be</a>
+					</p>
+				</footer>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="page-footer" aria-label="Pagina-voetnoot">
+		<p>CSS selectoren oefenblad – werk enkel in <code>oplossingen.css</code>.</p>
+	</footer>
+
+</body>
+
+</html>
