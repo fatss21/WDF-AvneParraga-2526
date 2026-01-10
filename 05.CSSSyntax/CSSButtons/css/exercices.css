@@ -1,0 +1,61 @@
+a {
+   font-family: Verdana, sans-serif;
+   text-decoration: none;
+}
+
+.btnGreen {
+   background-color: greenyellow;
+   border-radius: 6px;
+   color: white;
+   display: inline-block;
+   font-size: 16px;
+   padding: 12px 20px;
+   text-decoration: none;
+   text-transform: uppercase;
+}
+
+.btnGreen::after {
+   content: " →";
+}
+
+.btnGreen:hover {
+   color: darkslategrey;
+   transition: background-color 0.3s;
+}
+
+.btnFav {
+   background-color: bisque;
+   border-radius: 50%;
+   color: maroon;
+   display: inline-block;
+   font-size: 22px;
+   height: 50px;
+   line-height: 50px;
+   text-align: center;
+   text-decoration: none;
+   width: 50px;
+}
+
+.btnFav:hover {
+   color: red;
+   transition: background-color 0.3s;
+}
+
+.btnTiktok {
+   background-color: lightgray;
+   background-image: url(../img/logo-tiktok.png);
+   background-repeat: no-repeat;
+   background-position: 10px center;
+   background-size: 20px;
+   color: darkslategray;
+   display: inline-block;
+   font-size: 14px;
+   padding: 12px 20px 12px 40px;
+   text-decoration: none;
+}
+
+
+.btnTiktok:hover {
+   transition: background-color 0.3s;
+   text-decoration: underline;
+}
