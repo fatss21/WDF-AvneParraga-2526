@@ -1,0 +1,92 @@
+/* stylelint-disable no-duplicate-selectors */
+
+/* deel 1: start CSS */
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   background-color: #fff;
+}
+
+body {
+   border: 10px solid white;
+   height: 600px;
+   margin: 20px auto;
+   max-width: 300px;
+   padding: 40px 100px;
+
+}
+
+h1 {
+   margin-top: 30px;
+
+}
+
+main {
+   padding-top: 30px;
+}
+
+mark {
+   background-color: transparent;
+}
+
+footer {
+   margin-top: 35px;
+}
+
+/* deel 2: achtergronden */
+
+html {
+   background-image: url(../img/tile.png);
+}
+
+body {
+   background-image: url(../img/bg.png);
+   background-size: 100% 100%;
+}
+
+/* deel 3: lettertypes */
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+   font-family: Caveat;
+}
+
+main {
+   font-family: "Indie Flower";
+}
+
+/* deel 4: tekstopmaak */
+
+main {
+   color: blue;
+   line-height: 2;
+}
+
+mark {
+   color: red;
+}
+
+h1 {
+   text-align: center;
+   text-transform: lowercase;
+}
+
+
+/* deel 5: schaduwen */
+
+mark {
+   text-shadow: 1px 1px 2px black;
+}
+
+body {
+   box-shadow: 0 10px 20px black;
+}
+
+
