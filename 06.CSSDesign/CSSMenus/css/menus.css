@@ -1,0 +1,49 @@
+#menu-hor-green {
+   background-color: #abdb4c;
+   font-family: Verdana, sans-serif;
+   list-style: none;
+   padding: 0;
+   display: flex;
+}
+
+#menu-hor-green a {
+   color: #444;
+   display: block;
+   padding: 15px 20px;
+   text-decoration: none;
+   text-underline-offset: 5px;
+}
+
+#menu-hor-green a:hover, #menu-hor-green .active a {
+   text-decoration: underline;
+}
+
+#menu-social-vert {
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   list-style: none;
+   padding: 0;
+   text-align: center;
+   width: 50px;
+}
+
+#menu-social-vert li {
+   border-top: 1px solid #ccc;
+}
+
+#menu-social-vert a {
+   text-decoration: none;
+}
+
+#menu-social-vert span {
+   color: #99c63f;
+   display: inline-block;
+   font-size: 20px;
+   height: 50px;
+   line-height: 50px;
+   width: 50px;
+}
+
+#menu-social-vert span:hover, #menu-social-vert .active span {
+   color: #abdb4c;
+}
